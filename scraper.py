@@ -137,10 +137,10 @@ def scrape_site_articles(site_info: dict, max_articles: int = MAX_ARTICLES_PER_S
                 
                 if contenu and len(contenu) > 80:
                     articles.append({
-                        "nom_site": site_name,                 # Nom du site
-                        "url": url,                            # a. L'URL source
-                        "titre": final_title,                  # b. Le titre de l'article
-                        "contenu": contenu                     # c. Le contenu textuel
+                        "nom_site": site_name,               
+                        "url": url,                           
+                        "titre": final_title,                
+                        "contenu": contenu                  
                     })
                     logger.info(f"[{site_name}] Article {len(articles)} récupéré: {final_title[:45]}...")
             time.sleep(0.2)
@@ -171,7 +171,7 @@ def run_pipeline():
             inserted_ids = db_manager.insert_many(ARTICLES_COLLECTION, articles)
             count = len(inserted_ids)
             total_inserted += count
-            logger.info(f"   💾 {count} articles de {site['name']} directement enregistrés dans MongoDB.\n")
+            logger.info(f" {count} articles de {site['name']} directement enregistrés dans MongoDB.\n")
 
     print("======================================================================")
     print(f"PIPELINE DE COLLECTE TERMINÉ AVEC SUCCÈS !")

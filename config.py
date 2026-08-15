@@ -25,9 +25,8 @@ MODEL_NAME = "EIStakovskii/french_toxicity_classifier_plus_v2"
 THRESHOLD_LIGHT = float(os.getenv("THRESHOLD_LIGHT", 0.60))
 THRESHOLD_HIGH = float(os.getenv("THRESHOLD_HIGH", 0.85))
 
-# ------------------------------------------------------------------------------
-# Configuration Scraping : Nombre d'articles à récupérer par site (Modifiable ici)
-# ------------------------------------------------------------------------------
+
+# Nombre d'articles à récupérer par site (Modifiable ici)
 MAX_ARTICLES_PER_SITE = int(os.getenv("MAX_ARTICLES_PER_SITE", 15))
 
 # Liste des 8 médias cibles
