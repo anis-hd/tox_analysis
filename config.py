@@ -23,7 +23,7 @@ API_HEALTH_URL = os.getenv("API_HEALTH_URL", f"http://{API_HOST}:{PORT}/health")
 # Modèle NLP & Seuils
 MODEL_NAME = "EIStakovskii/french_toxicity_classifier_plus_v2"
 THRESHOLD_LIGHT = float(os.getenv("THRESHOLD_LIGHT", 0.70))
-THRESHOLD_HIGH = float(os.getenv("THRESHOLD_HIGH", 0.85))
+THRESHOLD_HIGH = float(os.getenv("THRESHOLD_HIGH", 0.90))
 
 
 # Nombre d'articles à récupérer par site (Modifiable ici)
